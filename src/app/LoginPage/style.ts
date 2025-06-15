@@ -47,6 +47,7 @@ export const ContainerLoginBox = styled.div`
                     padding: 1rem;
                     border: 1px solid ${props => props.theme['gray-700']};
                     background-color: ${props=>props.theme['gray-900']};
+                    color:${props=>props.theme['gray-100']};
                     border-radius: 4px;
                 }
                 button{
@@ -94,8 +95,7 @@ export const ContainerLoginBox = styled.div`
 `;
 export const ContainerImage = styled(Image)`
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     width: 100%;
-    height: auto;
-    
+    height: 100vh;
 `;

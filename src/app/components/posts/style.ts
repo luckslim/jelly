@@ -23,3 +23,9 @@ export const ContainerBodyPosts = styled.div`
     }
 `;
 export const ContainerFooterPosts = styled.div``;
+export const ContainerResponses =styled.div`
+    display: grid;
+    gap: 1rem;
+    border-top: 1px solid ${props=>props.theme['gray-600']};
+    padding: 1rem;
+`;

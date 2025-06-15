@@ -1,9 +1,34 @@
-import { CurrencyCircleDollarIcon, DotsThreeOutlineVerticalIcon, HeartIcon, ShareNetworkIcon } from "@phosphor-icons/react";
+import {
+  ChatCenteredTextIcon,
+  CurrencyCircleDollarIcon,
+  DotsThreeOutlineVerticalIcon,
+  HeartIcon,
+} from "@phosphor-icons/react";
 import { Profiler } from "../profiler";
-import { ContainerBodyPosts, ContainerFooterPosts, ContainerHeaderPosts, ContainerPostProvider } from "./style";
+import {
+  ContainerBodyPosts,
+  ContainerFooterPosts,
+  ContainerHeaderPosts,
+  ContainerPostProvider,
+  ContainerResponses,
+} from "./style";
 import { Actions } from "../actions";
+import { Response } from "./response";
+import { FormatMoney } from "@/app/utils/FormatMoney";
+import { useState } from "react";
 
 export function Posts() {
+  const [showComments, setShowComments] = useState(false);
+  function handlelike() {
+    console.log("curtido!");
+  }
+  function handleMoney() {
+    console.log("doado!");
+  }
+  function handleComments() {
+    setShowComments((prev) => !prev);
+    console.log("comments");
+  }
   return (
     <>
       <ContainerPostProvider>
@@ -22,11 +47,45 @@ export function Posts() {
             impedit blanditiis neque laudantium corrupti dolorum atque eaque,
             eius a commodi? Aliquid sit qui nam?
           </p>
-          <img src="https://repinte.com.br/wp-content/uploads/2019/02/269135-conheca-os-x-predios-mais-bonitos-do-mundo.jpg" alt="" />
+          <img
+            src="https://repinte.com.br/wp-content/uploads/2019/02/269135-conheca-os-x-predios-mais-bonitos-do-mundo.jpg"
+            alt=""
+          />
         </ContainerBodyPosts>
         <ContainerFooterPosts>
-            <Actions title="Responder" icons={[HeartIcon, ShareNetworkIcon, CurrencyCircleDollarIcon]}/>
+          <Actions
+            title="Comentar"
+            icons={[
+              { icon: HeartIcon, text: "123", onclick: handlelike },
+              {
+                icon: CurrencyCircleDollarIcon,
+                text: `${FormatMoney}`,
+                onclick: handleMoney,
+              },
+              {
+                icon: ChatCenteredTextIcon,
+                text: "50",
+                onclick: handleComments,
+              },
+            ]}
+          />
         </ContainerFooterPosts>
+        {showComments && (
+          <ContainerResponses>
+            <Response
+              name="Pedro Pascal"
+              userName="@pedropascal"
+              urlImage="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcDnIaSKvY5d0CIBuMqkX6rDIaO_9GCUGJSQ&s"
+              textProfile="Muito Bom!!"
+            />
+            <Response
+              name="Pedro Pascal"
+              userName="@pedropascal"
+              urlImage="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcDnIaSKvY5d0CIBuMqkX6rDIaO_9GCUGJSQ&s"
+              textProfile="Muito Bom!!"
+            />
+          </ContainerResponses>
+        )}
       </ContainerPostProvider>
     </>
   );

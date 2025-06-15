@@ -1,7 +1,7 @@
 import { ContainerButtonProvider, TypePropsButton } from "./style"
 
 type Props ={
-    title: String;
+    title?: String;
     type: TypePropsButton;
 }
 export function Button({title, type}:Props){

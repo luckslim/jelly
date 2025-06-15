@@ -1,6 +1,4 @@
-import Image from "next/image";
 import { BoxSpanProfiler, ContainerProfiler } from "./style";
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
 type Props = {
     name: string;
     userName: string;

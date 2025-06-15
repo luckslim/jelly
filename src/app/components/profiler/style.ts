@@ -6,6 +6,7 @@ export const ContainerProfiler = styled.div`
     img{
         display: flex;
         width: 50px;
+        height: 50px;
         border-radius: 8px;
     }
 `;

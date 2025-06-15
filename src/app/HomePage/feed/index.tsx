@@ -21,10 +21,11 @@ export function Feed() {
           <TextareaProvider PlaceHolder="Poste aqui!" />
           <Actions
             title="Postar"
-            icons={[ImagesSquareIcon, SmileyIcon ]}
+            icons={[{icon: SmileyIcon},{icon: ImagesSquareIcon}]}
           />
         </ContainerFeedProvider>
         <ContainerPostsProvider>
+          <Posts />
           <Posts />
         </ContainerPostsProvider>
       </ContainerGeneral>
