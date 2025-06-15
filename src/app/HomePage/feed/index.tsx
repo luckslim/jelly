@@ -2,9 +2,7 @@
 import { Actions } from "@/app/components/actions";
 import { TextareaProvider } from "@/app/components/textarea";
 import {
-  GithubLogoIcon,
   ImagesSquareIcon,
-  SmileyIcon,
 } from "@phosphor-icons/react";
 import {
   ContainerFeedProvider,
@@ -21,7 +19,7 @@ export function Feed() {
           <TextareaProvider PlaceHolder="Poste aqui!" />
           <Actions
             title="Postar"
-            icons={[{icon: SmileyIcon},{icon: ImagesSquareIcon}]}
+            icons={[{icon: ImagesSquareIcon}]}
           />
         </ContainerFeedProvider>
         <ContainerPostsProvider>

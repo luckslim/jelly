@@ -14,4 +14,6 @@ export const ContainerFeedProvider = styled.main`
 `;
 export const ContainerPostsProvider = styled.div`
     width: 500px;
+    display: grid;
+    gap: 1rem;
 `;
