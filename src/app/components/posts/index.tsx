@@ -10,24 +10,36 @@ import {
   ContainerFooterPosts,
   ContainerHeaderPosts,
   ContainerPostProvider,
+  ContainerResponseDonate,
   ContainerResponses,
+  ContainerResponsesComments,
 } from "./style";
 import { Actions } from "../actions";
 import { Response } from "./response";
 import { FormatMoney } from "@/app/utils/FormatMoney";
 import { useState } from "react";
+import { Input } from "../input";
+import { ContainerResponse } from "./response/style";
+import { Button } from "../button";
+import { TextAreaComments } from "../textareacomments";
 
 export function Posts() {
   const [showComments, setShowComments] = useState(false);
+  const [showDonate, setShowDonate] = useState(false);
+  const [showCommentsAction, setShowCommentsAction] = useState(false);
+
   function handlelike() {
     console.log("curtido!");
   }
   function handleMoney() {
-    console.log("doado!");
+    setShowDonate((prev) => !prev);
   }
   function handleComments() {
     setShowComments((prev) => !prev);
     console.log("comments");
+  }
+  function handleCommentsAction(){
+    setShowCommentsAction((prev)=>!prev)
   }
   return (
     <>
@@ -70,14 +82,16 @@ export function Posts() {
             ]}
           />
         </ContainerFooterPosts>
+        <ContainerResponsesComments>
+          <TextAreaComments />
+        </ContainerResponsesComments>
+        {showDonate && (
+          <ContainerResponseDonate>
+            <Input />
+          </ContainerResponseDonate>
+        )}
         {showComments && (
           <ContainerResponses>
-            <Response
-              name="Pedro Pascal"
-              userName="@pedropascal"
-              urlImage="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcDnIaSKvY5d0CIBuMqkX6rDIaO_9GCUGJSQ&s"
-              textProfile="Muito Bom!!"
-            />
             <Response
               name="Pedro Pascal"
               userName="@pedropascal"

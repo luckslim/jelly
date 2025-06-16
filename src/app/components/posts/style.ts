@@ -29,3 +29,12 @@ export const ContainerResponses =styled.div`
     border-top: 1px solid ${props=>props.theme['gray-600']};
     padding: 1rem;
 `;
+export const ContainerResponseDonate = styled.div`
+    display: flex;
+    flex: 1;
+`;
+export const ContainerResponsesComments = styled.div`
+ display: flex;
+ flex:1;
+ justify-content: center;
+`;

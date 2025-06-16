@@ -6,7 +6,7 @@ min-width: 450px;
 max-height: 100px;
 min-height: 100px;
 border: 1px solid ${props => props.theme['gray-500']};
-background-color: ${props=>props.theme['gray-800']};
+background-color: ${props=>props.theme['gray-900']};
 color: ${props=>props.theme['gray-100']};
 border-radius: 8px;
 height: 60px;
