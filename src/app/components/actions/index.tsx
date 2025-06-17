@@ -12,8 +12,9 @@ type CardProps = {
   icons?: ActionItem[];
   title?: string;
   children?: React.ReactNode;
+  onclick?:()=>void;
 };
-export function Actions({ icons, title}: CardProps) {
+export function Actions({ icons, title, onclick}: CardProps) {
   return (
     <>
       <ActionProvider>
@@ -28,7 +29,7 @@ export function Actions({ icons, title}: CardProps) {
             );
           })}
         </BoxActionIcons>
-        {title && <Button title={title} type="PRIMARY" />}
+        {title && <Button onclick={onclick} title={title} type="PRIMARY" />}
       </ActionProvider>
     </>
   );

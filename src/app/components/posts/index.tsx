@@ -33,13 +33,18 @@ export function Posts() {
   }
   function handleMoney() {
     setShowDonate((prev) => !prev);
+    setShowComments(false)
+    setShowCommentsAction(false)
   }
   function handleComments() {
     setShowComments((prev) => !prev);
-    console.log("comments");
+    setShowCommentsAction(false)
+    setShowDonate(false)
   }
-  function handleCommentsAction(){
-    setShowCommentsAction((prev)=>!prev)
+  function handleCommentsAction() {
+    setShowCommentsAction((prev) => !prev);
+    setShowDonate(false)
+    setShowComments(false)
   }
   return (
     <>
@@ -67,6 +72,7 @@ export function Posts() {
         <ContainerFooterPosts>
           <Actions
             title="Comentar"
+            onclick={handleCommentsAction}
             icons={[
               { icon: HeartIcon, text: "123", onclick: handlelike },
               {
@@ -82,9 +88,11 @@ export function Posts() {
             ]}
           />
         </ContainerFooterPosts>
-        <ContainerResponsesComments>
-          <TextAreaComments />
-        </ContainerResponsesComments>
+        {showCommentsAction && (
+          <ContainerResponsesComments>
+            <TextAreaComments />
+          </ContainerResponsesComments>
+        )}
         {showDonate && (
           <ContainerResponseDonate>
             <Input />

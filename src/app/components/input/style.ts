@@ -6,9 +6,10 @@ export const ContainerInput = styled.input`
     background-color: ${props => props.theme['gray-900']};
     color:${props => props.theme['gray-100']};
     border-radius: 4px;
-    width: 50%;
+    width: 60%;
 `;
 export const ContainerFormProvider =styled.form`
 display: flex;
 gap: 1rem;
+width: 100%;
 `;
