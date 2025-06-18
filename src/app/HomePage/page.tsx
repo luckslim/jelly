@@ -25,9 +25,7 @@ export default function HomePage() {
             <MagnifyingGlassIcon size={22} />
             Tags em alta
           </span>
-          <button>#bosonaro na cadeia!</button>
-          <button>#Neymar eu te amo!</button>
-          <button>#Lula ladrao roubou meu coração!</button>
+          <button>#post aleatório!</button>
         </ContainerExplorer>
       </ContainerProvider>
     </>

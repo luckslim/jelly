@@ -23,7 +23,7 @@ export function Actions({ icons, title, onclick}: CardProps) {
             const Icon = item.icon;
             return (
               <div key={index} style={{ textAlign: "center" }}>
-               {Icon && <Icon onClick={item.onclick} size={22}/>} 
+               {Icon && <Icon onClick={item.onclick} size={22}  />} 
                <span>{item.text}</span>
               </div>
             );

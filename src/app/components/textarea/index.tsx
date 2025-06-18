@@ -1,9 +1,11 @@
-import { ImagesSquareIcon } from "@phosphor-icons/react";
+import { GithubLogoIcon, ImagesSquareIcon } from "@phosphor-icons/react";
 import { Actions } from "../actions";
 import { ContainerGeneral, Textarea } from "./style";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import {IncrementTagImage } from "../incrementImage";
+import { IncrementGithub } from "@/app/incrementGithub";
 type Props = {
   PlaceHolder: string;
 };
@@ -29,7 +31,9 @@ export function TextareaProvider({ PlaceHolder }: Props) {
     <>
       <ContainerGeneral onSubmit={handleSubmit(handlePost)}>
         <Textarea {...register('post')} placeholder={PlaceHolder}></Textarea>
-        <Actions icons={[{ icon: ImagesSquareIcon }]} title="Postar" />
+        <IncrementTagImage nameButton="Enviar Imagem" typeFile="imagem.png" />
+        <IncrementGithub/>
+        <Actions icons={[{ icon: ImagesSquareIcon },{icon: GithubLogoIcon}]} title="Postar" />
       </ContainerGeneral>
     </>
   );
