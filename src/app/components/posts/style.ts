@@ -17,6 +17,7 @@ export const ContainerBodyPosts = styled.div`
     gap: 1rem;
     img{
         width: 100%;
+        border-radius: 8px;
     }
     p{
         color: ${props=>props.theme['gray-400']};
