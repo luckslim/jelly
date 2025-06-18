@@ -7,7 +7,7 @@ export const ContainerFeedProvider = styled.main`
     display: grid;
     gap: 1rem;
     justify-content: center;
-    border: 1px solid ${props=>props.theme['gray-600']};
+    border: 1px solid ${props=>props.theme['gray-700']};
     border-radius: 8px;
     padding: 1rem;
     width: 500px;

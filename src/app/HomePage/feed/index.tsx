@@ -10,17 +10,17 @@ import {
   ContainerPostsProvider,
 } from "./style";
 import { Posts } from "@/app/components/posts";
+import { z } from "zod";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 
 export function Feed() {
+
   return (
     <>
       <ContainerGeneral>
         <ContainerFeedProvider>
-          <TextareaProvider PlaceHolder="Poste aqui!" />
-          <Actions
-            title="Postar"
-            icons={[{icon: ImagesSquareIcon}]}
-          />
+          <TextareaProvider PlaceHolder="Apresente seu Projeto, faça amigos e contribua com a comunidade..." />
         </ContainerFeedProvider>
         <ContainerPostsProvider>
           <Posts />

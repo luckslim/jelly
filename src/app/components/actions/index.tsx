@@ -29,7 +29,7 @@ export function Actions({ icons, title, onclick}: CardProps) {
             );
           })}
         </BoxActionIcons>
-        {title && <Button onclick={onclick} title={title} type="PRIMARY" />}
+        {title && <Button  onclick={onclick} title={title} type="PRIMARY" />}
       </ActionProvider>
     </>
   );

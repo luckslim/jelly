@@ -77,7 +77,7 @@ export function Posts() {
               { icon: HeartIcon, text: "123", onclick: handlelike },
               {
                 icon: CurrencyCircleDollarIcon,
-                text: `${FormatMoney}`,
+                text: `${FormatMoney.format('100')}`,
                 onclick: handleMoney,
               },
               {

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ContainerTextProvider = styled.div`
+export const ContainerTextProvider = styled.form`
     display: grid;
     gap: 1rem;
     justify-content: center;
