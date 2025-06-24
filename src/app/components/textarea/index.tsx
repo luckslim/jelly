@@ -41,7 +41,7 @@ export function TextareaProvider({ PlaceHolder }: Props) {
       <ContainerGeneral onSubmit={handleSubmit(handlePost)}>
         <Textarea {...register("post")} placeholder={PlaceHolder}></Textarea>
         {ImageInsertTag && (
-          <IncrementTagImage nameButton="Enviar Imagem" typeFile="imagem.png" />
+          <IncrementTagImage nameButton="Enviar Imagem"/>
         )}
         {GithubInsertTag && <IncrementGithub />}
         <Actions

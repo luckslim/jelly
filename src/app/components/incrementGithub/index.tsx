@@ -12,7 +12,7 @@ const newGithubTagSchema = z.object({
 type NewGithubTagSchema = z.infer<typeof newGithubTagSchema>;
 export function IncrementGithub() {
   const [showTagGithub, setShowTagGithub] = useState(false);
-  const { register, handleSubmit, reset } = useForm<NewGithubTagSchema>({
+  const { register, handleSubmit, reset} = useForm<NewGithubTagSchema>({
     resolver: zodResolver(newGithubTagSchema),
   });
   function handleGithubTag({ tagGithub }: NewGithubTagSchema) {
