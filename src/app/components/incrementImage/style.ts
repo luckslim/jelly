@@ -9,3 +9,9 @@ export const ContainerGeneral = styled.div`
     font-size: small;
     font-weight: 100;
 `;
+export const IncrementimageInput =styled.input`
+    background-color: ${props=>props.theme['gray-600']};
+    padding: 0.2rem;
+    border-radius: 4px;
+    width: 200px;
+`;

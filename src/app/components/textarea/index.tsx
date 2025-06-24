@@ -4,8 +4,9 @@ import { ContainerGeneral, Textarea } from "./style";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import {IncrementTagImage } from "../incrementImage";
-import { IncrementGithub } from "@/app/incrementGithub";
+import { IncrementTagImage } from "../incrementImage";
+import { IncrementGithub } from "@/app/components/incrementGithub";
+import { useState } from "react";
 type Props = {
   PlaceHolder: string;
 };
@@ -14,11 +15,13 @@ const newPostFormSchema = z.object({
 });
 type NewPostFormSchema = z.infer<typeof newPostFormSchema>;
 export function TextareaProvider({ PlaceHolder }: Props) {
+  const [GithubInsertTag, setGithubInsertTag] = useState(false);
+  const [ImageInsertTag, setImageInsertTag] = useState(false);
+
   const {
     register,
     handleSubmit,
-    reset,
-    formState: { isSubmitting, errors },
+    reset
   } = useForm<NewPostFormSchema>({
     resolver: zodResolver(newPostFormSchema),
   });
@@ -27,13 +30,27 @@ export function TextareaProvider({ PlaceHolder }: Props) {
     reset();
     return;
   }
+  function handleGithubTag() {
+    setGithubInsertTag((prev) => !prev);
+  }
+  function handleImageTag() {
+    setImageInsertTag((prev) => !prev);
+  }
   return (
     <>
       <ContainerGeneral onSubmit={handleSubmit(handlePost)}>
-        <Textarea {...register('post')} placeholder={PlaceHolder}></Textarea>
-        <IncrementTagImage nameButton="Enviar Imagem" typeFile="imagem.png" />
-        <IncrementGithub/>
-        <Actions icons={[{ icon: ImagesSquareIcon },{icon: GithubLogoIcon}]} title="Postar" />
+        <Textarea {...register("post")} placeholder={PlaceHolder}></Textarea>
+        {ImageInsertTag && (
+          <IncrementTagImage nameButton="Enviar Imagem" typeFile="imagem.png" />
+        )}
+        {GithubInsertTag && <IncrementGithub />}
+        <Actions
+          icons={[
+            { icon: ImagesSquareIcon, onclick: handleImageTag },
+            { icon: GithubLogoIcon, onclick: handleGithubTag },
+          ]}
+          title="Postar"
+        />
       </ContainerGeneral>
     </>
   );

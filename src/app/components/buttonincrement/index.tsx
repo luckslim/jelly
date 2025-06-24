@@ -5,7 +5,7 @@ type Props ={
 export function ButtonIncrement({nameButton}:Props){
     return(
         <>
-            <ContainerButtonIncrement>
+            <ContainerButtonIncrement type="submit">
                 {nameButton}
             </ContainerButtonIncrement>
         </>

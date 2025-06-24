@@ -1,16 +1,16 @@
-import { X, XIcon } from "@phosphor-icons/react";
+import {XIcon } from "@phosphor-icons/react";
 import { ButtonIncrement } from "../buttonincrement";
-import { ContainerGeneral } from "./style";
+import { ContainerGeneral, IncrementimageInput } from "./style";
 type Props ={
     typeFile?:string;
     nameButton:string
 }
-export function IncrementTagImage({typeFile, nameButton}:Props) {
+export function IncrementTagImage({nameButton}:Props) {
     return (
         <>
             <ContainerGeneral>
                 <ButtonIncrement nameButton={nameButton} />
-                <p>{typeFile}</p>
+                <IncrementimageInput accept="image/*" type="file"  />
                 <XIcon size={15} weight="thin" color="red"/>
             </ContainerGeneral>
         </>
