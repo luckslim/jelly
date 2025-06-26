@@ -10,6 +10,7 @@ import {
 } from "./style";
 import { Sidebar } from "./sidebar";
 import { Feed } from "./feed";
+import { Search } from "../components/chat/searchFriends";
 export default function HomePage() {
   return (
     <>
@@ -21,11 +22,7 @@ export default function HomePage() {
           <Feed/>
         </ContainerFeed>
         <ContainerExplorer>
-          <span>
-            <MagnifyingGlassIcon size={22} />
-            Tags em alta
-          </span>
-          <button>#post aleatório!</button>
+          <Search/>
         </ContainerExplorer>
       </ContainerProvider>
     </>
