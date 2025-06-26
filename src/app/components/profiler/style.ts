@@ -12,6 +12,7 @@ export const ContainerProfiler = styled.div`
 `;
 export const BoxSpanProfiler = styled.span`
     display: grid;
+    grid:1;
     color: ${props=>props.theme['gray-100']};
     font-weight: 800;
     small{

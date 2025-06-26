@@ -23,17 +23,4 @@ export const ContainerExplorer = styled.div`
     grid: 1;
     gap: 1rem;
     justify-content: center;
-    span{
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-    }
-    button{
-        background-color: ${props => props.theme['gray-100']};
-        border: none;
-        padding: 0.2rem;
-        color: ${props => props.theme['gray-900']};
-        font-weight: 800;
-        border-radius: 8px;
-        }
 `;

@@ -1,10 +1,11 @@
 import { BoxSpanProfiler, ContainerProfiler } from "./style";
 type Props = {
-    name: string;
-    userName: string;
-    urlImage: string;
+    name?: string;
+    userName?: string;
+    urlImage?: string;
+    message?: string;
 }
-export function Profiler({name, userName, urlImage}:Props){
+export function Profiler({name, userName, urlImage, message}:Props){
     return(
         <>
          <ContainerProfiler>
@@ -12,6 +13,7 @@ export function Profiler({name, userName, urlImage}:Props){
             <BoxSpanProfiler>
                 {name}
                 <small>{userName}</small>
+                <small>{message}</small>
             </BoxSpanProfiler>
          </ContainerProfiler>
         </>

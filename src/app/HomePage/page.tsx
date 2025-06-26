@@ -11,6 +11,7 @@ import {
 import { Sidebar } from "./sidebar";
 import { Feed } from "./feed";
 import { Search } from "../components/chat/searchFriends";
+import { ChatInRealTime } from "../components/chat";
 export default function HomePage() {
   return (
     <>
@@ -22,7 +23,7 @@ export default function HomePage() {
           <Feed/>
         </ContainerFeed>
         <ContainerExplorer>
-          <Search/>
+          <ChatInRealTime/>
         </ContainerExplorer>
       </ContainerProvider>
     </>
