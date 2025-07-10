@@ -5,6 +5,7 @@ import { useState } from "react";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Actions } from "../../actions";
+import { Message } from "./message";
 export function ListChat() {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
@@ -20,9 +21,13 @@ export function ListChat() {
                     <Profiler name="Lucas Soares" urlImage="https://avatars.githubusercontent.com/u/95627552?v=4" userName="@Lucassoarelim22" />
                 </Offcanvas.Header>
                 <Offcanvas.Body>
-                    <ContainerChatMessage></ContainerChatMessage>
+                    <ContainerChatMessage>
+                        <Message type={"ProfilerMe"} text="Mensagem do amigo" />
+                        <Message type={"ProfilerFriend"} text="minha mensagem!" />
+                        <Message type={"ProfilerFriend"} text="minha mensagem, outra vez!" />
+                    </ContainerChatMessage>
                     <ContainerSendMessage>
-                        <ContainerTextArea/>
+                        <ContainerTextArea />
                         <Actions title="enviar" />
                     </ContainerSendMessage>
                 </Offcanvas.Body>

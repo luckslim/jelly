@@ -17,7 +17,10 @@ export const StyleOffCanvas = styled(Offcanvas)`
     background-color:${props=>props.theme['gray-800']};
     color: ${props=>props.theme['gray-300']};
 `;
-export const ContainerChatMessage = styled.div``;
+export const ContainerChatMessage = styled.div`
+    display: grid;
+    gap: 0.5rem;
+`;
 export const ContainerSendMessage = styled.div``;
 export const ContainerTextArea = styled.textarea`
     background-color: ${props=>props.theme['gray-900']};
