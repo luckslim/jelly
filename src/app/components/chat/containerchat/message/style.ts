@@ -3,7 +3,7 @@ export type MessageTypeProps = 'ProfilerFriend'|'ProfilerMe'
 export type Props = {
     type?: MessageTypeProps;
 }
-export const ContainerGeneral = styled.button<Props>`
+export const ContainerGeneral = styled.span<Props>`
     display: flex;
     background-color: transparent;
     border: none;

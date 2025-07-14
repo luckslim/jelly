@@ -12,8 +12,9 @@ export function Sidebar() {
           name="Lucas Soares Lima"
           userName="@lucassl22"
         />
-        <Button title="Meus Posts" type="PRIMARY"/>
         <Button title="Pulse Coins" type="PRIMARY" />
+        <Button title="Meus Posts" type="PRIMARY" />
+        <Button title="Meus Amigos" type="PRIMARY" />
         <Button title="Sair" type="SECONDARY" />
       </ContainerSideBarProfiler>
       <div className="div"></div>
