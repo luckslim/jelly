@@ -10,7 +10,7 @@ export function BuyPulseCoins() {
             <ContainerPulseCoins>
                 <ContainerDescription>
                     <h3>Pulse Coins <Image src={imglogo} width={40} alt="" /></h3>
-                    <p>Quantidade<ArrowFatLineRightIcon size={22} weight="fill" /> <div>1000 <CoinsIcon color="#efff5e" size={22} weight="fill" /></div></p>
+                    <p>Quantidade<ArrowFatLineRightIcon size={22} weight="fill" /> <span>1000 <CoinsIcon color="#efff5e" size={22} weight="fill" /></span></p>
                 </ContainerDescription>
                 <Button title={FormatMoney.format(50)} type="SECONDARY" />
             </ContainerPulseCoins>

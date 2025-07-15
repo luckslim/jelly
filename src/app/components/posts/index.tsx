@@ -6,6 +6,7 @@ import {
 } from "@phosphor-icons/react";
 import { Profiler } from "../profiler";
 import {
+  ButtonFriendly,
   ContainerBodyPosts,
   ContainerFooterPosts,
   ContainerHeaderPosts,
@@ -27,9 +28,12 @@ export function Posts() {
   const [showComments, setShowComments] = useState(false);
   const [showDonate, setShowDonate] = useState(false);
   const [showCommentsAction, setShowCommentsAction] = useState(false);
-
+  const [showButton, setShowButton] = useState(false)
   function handlelike() {
     console.log("curtido!");
+  }
+  function handleButtonFriendly(){
+    setShowButton((prev)=>!prev)
   }
   function handleMoney() {
     setShowDonate((prev) => !prev);
@@ -55,7 +59,8 @@ export function Posts() {
             userName="@lucasdfjso"
             urlImage="https://avatars.githubusercontent.com/u/95627552?v=4"
           />
-          <DotsThreeOutlineVerticalIcon size={22} />
+          {showButton && <ButtonFriendly>Enviar Convite</ButtonFriendly>}
+          {!showButton && <DotsThreeOutlineVerticalIcon onClick={handleButtonFriendly} size={22} />}
         </ContainerHeaderPosts>
         <ContainerBodyPosts>
           <p>

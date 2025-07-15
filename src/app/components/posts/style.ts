@@ -23,6 +23,17 @@ export const ContainerBodyPosts = styled.div`
         color: ${props=>props.theme['gray-400']};
     }
 `;
+export const ButtonFriendly = styled.button`
+    background-color: ${props=>props.theme['green-500']};
+    color: ${props=>props.theme['gray-900']};
+    font-weight: 800;
+    padding: 1rem;
+    border: none;
+    border-radius: 4px;
+    &:hover{
+        opacity: 70%;
+    }
+`;
 export const ContainerFooterPosts = styled.div``;
 export const ContainerResponses =styled.div`
     display: grid;
