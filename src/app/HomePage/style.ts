@@ -13,12 +13,20 @@ export const ContainerFeed = styled.div`
     align-items: center;
 `;
 export const ContainerSideBar = styled.div`
+ position: sticky;
+  top: 2rem; /* distância do topo */
+  align-self: flex-start;
+  height: fit-content;
     display: grid;
     grid: 1;
     gap: 1rem;
     padding: 1rem;
 `;
 export const ContainerExplorer = styled.div`
+ position: sticky;
+  top: 2rem; /* distância do topo */
+  align-self: flex-start;
+  height: fit-content;
     display: grid;
     grid: 1;
     gap: 1rem;

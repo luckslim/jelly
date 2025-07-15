@@ -5,6 +5,7 @@ import {
   ContainerChatProfiler,
   ContainerSendMessage,
   ContainerTextArea,
+  StyleBodyCanvas,
   StyleOffCanvas,
 } from "./style";
 import { useState } from "react";
@@ -34,8 +35,32 @@ export function ListChat() {
             userName="@Lucassoarelim22"
           />
         </Offcanvas.Header>
-        <Offcanvas.Body>
+        <StyleBodyCanvas>
           <ContainerChatMessage>
+            <Message type={"ProfilerMe"} text="Mensagem do amigo" />
+            <Message type={"ProfilerFriend"} text="minha mensagem!" />
+            <Message
+              type={"ProfilerFriend"}
+              text="minha mensagem, outra vez!"
+            />
+            <Message type={"ProfilerMe"} text="Mensagem do amigo" />
+            <Message type={"ProfilerFriend"} text="minha mensagem!" />
+            <Message
+              type={"ProfilerFriend"}
+              text="minha mensagem, outra vez!"
+            />
+            <Message type={"ProfilerMe"} text="Mensagem do amigo" />
+            <Message type={"ProfilerFriend"} text="minha mensagem!" />
+            <Message
+              type={"ProfilerFriend"}
+              text="minha mensagem, outra vez!"
+            />
+            <Message type={"ProfilerMe"} text="Mensagem do amigo" />
+            <Message type={"ProfilerFriend"} text="minha mensagem!" />
+            <Message
+              type={"ProfilerFriend"}
+              text="minha mensagem, outra vez!"
+            />
             <Message type={"ProfilerMe"} text="Mensagem do amigo" />
             <Message type={"ProfilerFriend"} text="minha mensagem!" />
             <Message
@@ -47,7 +72,7 @@ export function ListChat() {
             <ContainerTextArea />
             <Actions title="enviar" />
           </ContainerSendMessage>
-        </Offcanvas.Body>
+        </StyleBodyCanvas>
       </StyleOffCanvas>
     </>
   );
