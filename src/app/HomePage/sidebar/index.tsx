@@ -1,7 +1,9 @@
 "use client";
 import { Button } from "@/app/components/button";
-import { ContainerSideBarProfiler } from "./style";
+import { ContainerSideBarProfiler, DisplayCoins } from "./style";
 import { Profiler } from "@/app/components/profiler";
+import { BuyPulseCoins } from "@/app/components/buycoins";
+import {CoinsIcon } from "@phosphor-icons/react";
 
 export function Sidebar() {
   return (
@@ -12,12 +14,14 @@ export function Sidebar() {
           name="Lucas Soares Lima"
           userName="@lucassl22"
         />
-        <Button title="Pulse Coins" type="PRIMARY" />
+        <DisplayCoins>
+          Moedas
+          <p>1000 <CoinsIcon color="#e6ff58" size={22} weight="fill" /></p>
+        </DisplayCoins>
         <Button title="Meus Posts" type="PRIMARY" />
-        <Button title="Meus Amigos" type="PRIMARY" />
         <Button title="Sair" type="SECONDARY" />
       </ContainerSideBarProfiler>
-      <div className="div"></div>
+      <BuyPulseCoins/>
     </>
   );
 }

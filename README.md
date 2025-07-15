@@ -9,7 +9,6 @@
 ###### o sistema deve ter opção para o usuario postar os projetos 🆗  
 ###### o sistema deve ter um feed de projetos postados por todos os usuarios 🆗 
 ###### o sistema deve ter opções no post como : (apoiar, like, comentarios) e poder visualizar comentarios feitos em cada post. 🆗 
-###### o sistema deve mostrar a quantidade de moedas do usuario logado
-###### o sistema deve ter 3 opções de compra para moedas da plataforma
-###### o sistema deve mostrar a quantidade de amigos que o usuario tem
+###### o sistema deve mostrar a quantidade de moedas do usuario logado  🆗
+###### o sistema deve ter opção de compra para moedas da plataforma  🆗
 ###### sistema deve dar opção de adicionar um usuario a lista de amigos atraves de uma postagem
