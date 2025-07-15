@@ -15,6 +15,18 @@ export const ContainerHeaderPosts = styled.div`
 export const ContainerBodyPosts = styled.div`
     display: grid;
     gap: 1rem;
+    a{
+        background-color: ${props=>props.theme['gray-100']};
+        color: ${props=>props.theme['gray-900']};
+        text-decoration: none;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0.5rem;
+        border-radius: 4px;
+        width: 200px;
+    }
     img{
         width: 100%;
         border-radius: 8px;

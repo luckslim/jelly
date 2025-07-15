@@ -20,9 +20,8 @@ import { Response } from "./response";
 import { FormatMoney } from "@/app/utils/FormatMoney";
 import { useState } from "react";
 import { Input } from "../input";
-import { ContainerResponse } from "./response/style";
-import { Button } from "../button";
 import { TextAreaComments } from "../textareacomments";
+import { GitBranchIcon } from "@phosphor-icons/react/dist/ssr";
 
 export function Posts() {
   const [showComments, setShowComments] = useState(false);
@@ -63,6 +62,7 @@ export function Posts() {
           {!showButton && <DotsThreeOutlineVerticalIcon onClick={handleButtonFriendly} size={22} />}
         </ContainerHeaderPosts>
         <ContainerBodyPosts>
+          <a href="http://" target="_blank" rel="noopener noreferrer">Repositório Github<GitBranchIcon size={22} /></a>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             Reprehenderit, expedita provident tempore soluta, beatae aliquid

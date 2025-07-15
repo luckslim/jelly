@@ -7,7 +7,6 @@ export const ContainerPulseCoins = styled.div`
     justify-content: center;
     border-top-right-radius: 8px;
     border-bottom-left-radius: 8px;
-    border: 1px solid ${props=>props.theme['gray-700']};
     background: ${props=>props.theme['gray-900']};
     padding: 1rem;
     h3{
