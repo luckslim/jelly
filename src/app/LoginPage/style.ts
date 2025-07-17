@@ -8,6 +8,7 @@ export const Container = styled.div`
 `;
 export const ContainerBackground = styled.div`
     width: 70%;
+    height: 100%;
     @media screen and (max-width:780px){
         display: none;
     }

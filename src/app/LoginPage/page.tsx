@@ -15,8 +15,8 @@ import { useRouter } from "next/navigation";
 
 export default function LoginPage() {
   const route = useRouter();
-  function handleLogin(e:any){
-    e.preventDefault()
+  function handleLogin(){
+    
     route.push("/HomePage");
     return "HomePage"
   }
@@ -39,7 +39,7 @@ export default function LoginPage() {
               <form action="">
                 <input type="text" placeholder="Digite seu Nome de Usuário" />
                 <input type="text" placeholder="Digite sua Senha"/>
-                <button onClick={(e)=>handleLogin(e)}>Login</button>
+                <button onClick={handleLogin}>Login</button>
                 Faça Login com Google e Github:
               </form>
               <button><Image src={Google} width={30} alt=""/>Google</button>
