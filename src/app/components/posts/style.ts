@@ -39,7 +39,7 @@ export const ButtonFriendly = styled.button`
     background-color: ${props=>props.theme['green-500']};
     color: ${props=>props.theme['gray-900']};
     font-weight: 800;
-    padding: 1rem;
+    padding: 1px 1rem;
     border: none;
     border-radius: 4px;
     &:hover{
