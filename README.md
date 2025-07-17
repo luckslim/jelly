@@ -11,5 +11,5 @@
 ###### o sistema deve ter opções no post como : (apoiar, like, comentarios) e poder visualizar comentarios feitos em cada post. 🆗 
 ###### o sistema deve mostrar a quantidade de moedas do usuario logado 🆗
 ###### o sistema deve ter opção de compra para moedas da plataforma  🆗
-###### sistema deve dar opção de adicionar um usuario a lista de amigos atraves de uma postagem
-###### o sistema deve gerenciar os amigos de cada perfil com opções de deletar da lista de amigos
+###### sistema deve dar opção de adicionar um usuario a lista de amigos atraves de uma postagem 🆗
+###### o sistema deve gerenciar os amigos de cada perfil com opções de deletar da lista de amigos 

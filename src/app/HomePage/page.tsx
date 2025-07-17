@@ -8,6 +8,7 @@ import {
 import { Sidebar } from "./sidebar";
 import { Feed } from "./feed";
 import { ChatInRealTime } from "../components/chat";
+import { FriendRequest } from "../components/friendRequest";
 export default function HomePage() {
   return (
     <>
@@ -19,6 +20,7 @@ export default function HomePage() {
           <Feed/>
         </ContainerFeed>
         <ContainerExplorer>
+          <FriendRequest/>
           <ChatInRealTime/>
         </ContainerExplorer>
       </ContainerProvider>
