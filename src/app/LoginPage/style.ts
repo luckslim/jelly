@@ -8,6 +8,7 @@ export const Container = styled.div`
 `;
 export const ContainerBackground = styled.div`
     width: 70%;
+    height: 100vh;
     @media screen and (max-width:780px){
         display: none;
     }
@@ -97,5 +98,5 @@ export const ContainerImage = styled(Image)`
     background-position: center;
     background-size: cover;
     width: 100%;
-    height: 100vh;
+    height: auto;
 `;
